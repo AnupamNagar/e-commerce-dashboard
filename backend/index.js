@@ -39,7 +39,13 @@ app.post('/login', async (req, res) => {
 app.post('/addproduct', async (req, res) => {
     let product = new Product(req.body);
     let result = await product.save();
-    res.send(result);
+    res.send(
+        {
+            status : 200,
+            message: "Product added succesfully"
+
+        }
+    );
 });
 
 // Product list route (get method)

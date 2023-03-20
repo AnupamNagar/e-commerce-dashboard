@@ -10,7 +10,7 @@ const Nav = () => {
     navigate("/login");
   }
   return (
-    <div className='w-full p-4  bg-sky-300'>
+    <div className='w-full p-4  bg-sky-300 fixed'>
       
         {
           auth ? <>

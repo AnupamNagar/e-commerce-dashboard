@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import {useNavigate} from 'react-router-dom';
+
 
 const Addproduct = () => {
     const [name, setName] = useState('');
@@ -6,9 +8,11 @@ const Addproduct = () => {
     const [category, setCategory] = useState('');
     const [company, setCompany] = useState('');
     const [error , setError] = useState('');
+    const navigate = useNavigate();
+    
 
     const addproduct =async () => {
-        // console.log(name, price, category, company);
+        console.log(name, price, category, company);
         // console.warn(!name)  // it returns true when input field is empty else return false
 
         // form validations
@@ -36,12 +40,16 @@ const Addproduct = () => {
             })
         });
         result = await result.json();
-        // console.warn(result);
+        if(result){
+            navigate('/');
+        }
+        
+        // console.log(result);
     }
 
     return (
-        <section className="  py-4 dark:bg-gray-900">
-            <div className="flex flex-col items-center justify-center px-6  mx-auto  lg:py-0">
+        <section className="  py-4 dark:bg-gray-900 ">
+            <div className="flex flex-col items-center justify-center px-6  mx-auto  lg:py-0 mt-20">
 
                 <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
                     <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
