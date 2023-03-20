@@ -42,7 +42,7 @@ const Productlist = () => {
     // console.warn(Products);
     return (
         <>
-            <div className='flex flex-col'>
+            <div className='flex flex-col max-h-screen pb-16'>
                 <div className=' mt-10   '>
                 <div className='p-6 flex justify-center'>
                     <h1 className=' font-bold text-xl'>Products List</h1>
@@ -55,9 +55,9 @@ const Productlist = () => {
                 </form>
                 </div>
 
-                <div className=" overflow-x-auto  shadow-md sm:rounded-lg pt-4">
+                <div className=" overflow-y-auto overflow-x-auto  shadow-md sm:rounded-lg pt-4">
                     <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                        <thead className="text-sm text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                        <thead className="text-sm text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 ">
                             <tr>
                                 <th scope="col" className="px-6 py-3">
                                     S. No.
@@ -79,7 +79,7 @@ const Productlist = () => {
                                 </th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody className=''>
                             {
                                 Products.length > 0 ? Products.map((item, index) =>
                                     <tr key={item._id} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">

@@ -30,7 +30,7 @@ function App() {
         <Route path="/signup" element={<Signup />}></Route>
         
       </Routes>
-      {/* <Footer></Footer> */}
+      <Footer></Footer>
     </BrowserRouter>
   )
 }
